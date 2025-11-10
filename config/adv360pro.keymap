@@ -15,15 +15,23 @@
             quick-tap-ms = <175>;
             bindings = <&mo>, <&kp>;
         };
+        
+        ht_del: hold_tap_del {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP_DEL";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            bindings = <&mo>, <&kp>;
+        };
 
-        ht_delete: hold_tap_delete {
-          compatible = "zmk,behavior-hold-tap";
-          label = "HOLD_TAP_DELETE";
-          #binding-cells = <2>;
-          flavor = "tap-preferred";
-          tapping-term-ms = <200>;
-          quick-tap-ms = <175>;
-          bindings = <&mo>, <&kp>;
+        hyper: hyper_key {
+            compatible = "zmk,behavior-mod-morph";
+            label = "HYPER_KEY";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LC(LS(LALT)))>, <&kp LG(LC(LS(LALT)))>;
+            mods = <(MOD_LGUI|MOD_LCTL|MOD_LSFT|MOD_LALT)>;
         };
     };
 
@@ -36,27 +44,17 @@
                 &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T    &none  &none &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
                 &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G    &none  &kp LCTRL &kp LALT &kp LGUI &kp RCTRL &none &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
                 &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B    &kp HOME  &kp PG_UP &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-                &mo 2     &kp EQUAL &kp CAPS &kp LEFT &kp RIGHT  &kp BSPC &kp DEL   &kp END  &kp PG_DN &ht_enter 1 ENTER &kp SPACE  &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
+                &mo 2     &kp EQUAL &kp CAPS &kp LEFT &kp RIGHT  &kp BSPC &ht_del 4 DEL   &hyper  &hyper &ht_enter 1 ENTER &kp SPACE  &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
             >;
         };
-
+        
         keypad {
-          bindings = <
-            &kp EQUAL    &kp KP_NUM    &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp N5 &none                                                           &mo 3 &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
-            &kp TAB      &kp KP_N7     &kp KP_N8    &kp KP_N9     &kp KP_MINUS    &kp T  &none                                                            &none &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
-            &kp ESC      &kp KP_N4     &kp KP_N5    &kp KP_N6     &kp KP_PLUS     &kp G  &none           &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &none &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
-            &kp LSHFT    &kp KP_N1     &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &kp B                            &kp HOME &kp PG_UP                           &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-            &mo 2        &kp KP_N0     &kp CAPS     &kp LEFT      &kp RIGHT                &kp BSPC &kp DEL   &kp END  &kp PG_DN &trans &kp KP_DOT              &kp UP     &kp DOWN     &kp LBKT    &kp RBKT        &mo 2
-          >;
-        };
-
-        brackets {
             bindings = <
-                &trans &trans    &trans   &trans   &trans     &trans &none                                           &mo 3 &trans &trans   &trans   &trans   &trans   &trans
-                &trans &trans    &trans   &trans   &trans     &trans &none                                           &none &trans &kp LPAR &kp RPAR &kp LBKT &kp RBKT &trans
-                &trans &trans    &trans   &trans   &trans     &trans &none        &trans &trans &trans &trans        &none &trans &kp LBRC &kp RBRC &kp LT   &kp GT   &trans
-                &trans &trans    &trans   &trans   &trans     &trans                      &trans &trans                     &trans &kp EXCL &kp AT   &kp HASH &kp DLLR &trans
-                &trans &trans    &trans   &trans   &trans              &trans &trans &trans &trans &trans &trans              &kp AMPS &kp STAR &kp UNDER &kp PLUS &trans
+                &kp EQUAL    &kp KP_NUM    &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp N5 &none                                                           &mo 3 &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
+                &kp TAB      &kp KP_N7     &kp KP_N8    &kp KP_N9     &kp KP_MINUS    &kp T  &none                                                            &none &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
+                &kp ESC      &kp KP_N4     &kp KP_N5    &kp KP_N6     &kp KP_PLUS     &kp G  &none           &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &none &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
+                &kp LSHFT    &kp KP_N1     &kp KP_N2    &kp KP_N3     &kp KP_ENTER    &kp B                            &kp HOME &kp PG_UP                           &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
+                &mo 2        &kp KP_N0     &kp CAPS     &kp LEFT      &kp RIGHT                &kp BSPC &trans   &hyper  &hyper &trans &kp KP_DOT              &kp UP     &kp DOWN     &kp LBKT    &kp RBKT        &mo 2
             >;
         };
         
@@ -66,7 +64,7 @@
                 &trans &trans &trans &trans &trans &trans  &none                                           &none &trans &trans &trans &trans  &trans  &trans
                 &trans &trans &trans &trans &trans &trans  &none        &trans &trans &trans &trans        &none &trans &trans &trans &trans  &trans  &trans
                 &trans &trans &trans &trans &trans &trans                      &trans &trans                     &trans &trans &trans &trans  &trans  &trans
-                &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans              &trans &trans &trans  &trans  &trans
+                &trans &trans &trans &trans &trans               &trans &trans &hyper &hyper &trans &trans              &trans &trans &trans  &trans  &trans
             >;
         };
         
@@ -76,10 +74,18 @@
                 &none &none        &none        &none        &none        &none        &bootloader                                                         &bootloader &none &none      &none      &none &none &none
                 &none &none        &none        &none        &none        &none        &none             &none &none &bt BT_CLR &none                      &none       &none &none      &none      &none &none &none
                 &none &none        &none        &none        &none        &none                                &none &none                                             &none &none      &none      &none &none &none
-                &none &none        &none        &none        &none                                 &none &none &none &none      &bl BL_TOG &rgb_ug RGB_TOG                   &bl BL_INC &bl BL_DEC &none &none &none
+                &none &none        &none        &none        &none                                 &none &none &hyper &hyper      &bl BL_TOG &rgb_ug RGB_TOG                   &bl BL_INC &bl BL_DEC &none &none &none
             >;
         };
-
-
+        
+        brackets {
+            bindings = <
+                &trans &trans    &trans   &trans   &trans     &trans &none                                           &mo 3 &trans &trans   &trans   &trans   &trans   &trans
+                &trans &trans    &trans   &trans   &trans     &trans &none                                           &none &trans &kp LPAR &kp RPAR &kp LBKT &kp RBKT &trans
+                &trans &trans    &trans   &trans   &trans     &trans &none        &trans &trans &trans &trans        &none &trans &kp LBRC &kp RBRC &kp LT   &kp GT   &trans
+                &trans &trans    &trans   &trans   &trans     &trans                      &trans &trans                     &trans &kp EXCL &kp AT   &kp HASH &kp DLLR &trans
+                &trans &trans    &trans   &trans   &trans              &trans &trans &hyper &hyper &trans &trans              &kp AMPS &kp STAR &kp UNDER &kp PLUS &trans
+            >;
+        };
     };
 };
