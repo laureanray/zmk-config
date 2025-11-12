@@ -44,7 +44,7 @@
                 &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T    &none  &none &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
                 &kp ESC   &kp A     &kp S    &kp D    &kp F      &kp G    &none  &kp LCTRL &kp LALT &kp RALT &kp RCTRL &none &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
                 &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B    &kp LCMD  &kp LCMD &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-                &mo 2     &kp EQUAL &kp CAPS &kp LEFT &kp RIGHT  &kp BSPC &ht_del 4 DEL   &hyper  &hyper &kp ENTER &kp SPACE  &kp UP &kp DOWN  &ht_lgui 1 LGUI &kp RBKT &mo 2
+                &mo 2     &kp EQUAL &kp CAPS &kp LEFT &kp RIGHT  &kp BSPC &ht_del 4 DEL   &hyper  &hyper &kp ENTER &kp SPACE  &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo 2
             >;
         };
         
@@ -81,9 +81,9 @@
         brackets {
             bindings = <
                 &trans       &trans        &trans       &trans       &trans          &trans &none                                                           &mo 3 &trans &kp AMPS  &kp STAR  &kp LPAR &kp RPAR     &trans
-                &trans       &trans        &trans       &trans       &trans          &trans &none                                                           &none &trans &kp DLLR  &kp PRCNT &kp CARET &kp PLUS    &trans
-                &trans       &trans        &trans       &trans       &trans          &trans &none        &trans &trans &trans &trans                      &none &trans &kp EXCL  &kp AT    &kp HASH &kp UNDER   &trans
-                &trans       &trans        &trans       &trans       &trans          &trans                      &trans &trans                                  &trans &kp RPAR  &kp GT    &kp QMARK &kp PIPE   &trans
+                &trans       &trans        &trans       &trans       &trans          &trans &none                                                           &none &trans &kp &none  &kp PRCNT &kp CARET &kp PLUS    &trans
+                &trans       &trans        &trans       &trans       &trans          &trans &none        &trans &trans &trans &trans                      &none &trans &kp &none  &kp AT    &kp HASH &kp UNDER   &trans
+                &trans       &trans        &trans       &trans       &trans          &trans                      &trans &trans                                  &trans &kp &none  &kp GT    &kp QMARK &kp PIPE   &trans
                 &trans       &trans        &trans       &trans       &trans                    &trans &trans &trans &trans &trans &trans                           &trans    &trans     &trans       &trans        &trans
             >;
         };
