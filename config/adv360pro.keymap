@@ -31,11 +31,11 @@
 
         keypad {
             bindings = <
-&trans  &trans                &trans                 &trans            &trans             &trans  &tog 0                                                    &mo 3  &trans  &kp KP_N7  &kp KP_N8  &kp KP_N9   &kp KP_MULTIPLY  &trans
-&trans  &kp EXCL              &kp AT                 &kp LESS_THAN     &kp GREATER_THAN   &trans  &none                                                     &none  &trans  &kp KP_N7  &kp KP_N8  &kp KP_N9   &kp KP_PLUS      &trans
-&trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans  &none           &trans  &trans    &trans  &trans          &none  &trans  &kp KP_N4  &kp KP_N5  &kp KP_N6   &kp KP_MINUS     &trans
-&trans  &trans                &trans                 &trans            &trans             &trans                          &trans    &trans                         &trans  &kp KP_N1  &kp KP_N2  &kp KP_N3   &kp KP_DIVIDE    &trans
-&trans  &trans                &trans                 &sys_reset        &trans                             &trans  &trans  &trans    &trans  &trans  &trans                 &trans     &kp KP_N0  &kp KP_DOT  &trans           &trans
+&trans  &trans                &trans                 &trans            &trans             &trans         &tog 0                                                    &mo 3  &trans  &kp KP_N7  &kp KP_N8  &kp KP_N9   &kp KP_MULTIPLY  &trans
+&trans  &kp EXCL              &kp AT                 &kp LESS_THAN     &kp GREATER_THAN   &kp EQUAL      &none                                                     &none  &trans  &kp KP_N7  &kp KP_N8  &kp KP_N9   &kp KP_PLUS      &trans
+&trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS      &none           &trans  &trans    &trans  &trans          &none  &trans  &kp KP_N4  &kp KP_N5  &kp KP_N6   &kp KP_MINUS     &trans
+&trans  &trans                &trans                 &trans            &trans             &kp BACKSLASH                          &trans    &trans                         &trans  &kp KP_N1  &kp KP_N2  &kp KP_N3   &kp KP_DIVIDE    &trans
+&trans  &trans                &trans                 &sys_reset        &trans                                    &trans  &trans  &trans    &trans  &trans  &trans                 &trans     &kp KP_N0  &kp KP_DOT  &trans           &trans
             >;
         };
 
