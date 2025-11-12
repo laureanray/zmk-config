@@ -25,7 +25,7 @@
 &kp TAB    &kp Q      &kp W   &kp E   &kp R       &kp T   &kp LPAR                                                                           &kp RPAR           &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
 &kp ESC    &kp A      &kp S   &kp D   &kp F       &kp G   &kp LEFT_BRACKET            &kp LCTRL  &kp LALT    &kp RALT  &kp RCTRL             &kp RIGHT_BRACKET  &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z      &kp X   &kp C   &kp V       &kp B                                          &kp LCMD    &kp LCMD                                           &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&mo 1      &kp EQUAL  &tog 3  &trans  &sys_reset                            &kp BSPC  &kp DEL    &hyper      &hyper    &kp ENTER  &kp SPACE                             &trans  &to 5      &kp LBKT  &kp RBKT  &mo 1
+&mo 1      &kp EQUAL  &tog 3  &trans  &sys_reset                            &kp BSPC  &kp DEL    &hyper      &hyper    &kp ENTER  &kp SPACE                             &trans  &to 4      &kp LBKT  &kp RBKT  &mo 1
             >;
         };
 
@@ -65,7 +65,7 @@
 &kp TAB    &kp Q      &kp W   &kp E   &kp R       &kp T   &kp LPAR                                                                             &kp RPAR           &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
 &kp ESC    &kp A      &kp S   &kp D   &kp F       &kp G   &kp LEFT_BRACKET            &kp LMETA  &kp LALT     &kp RALT   &kp RMETA             &kp RIGHT_BRACKET  &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z      &kp X   &kp C   &kp V       &kp B                                          &kp LCTRL    &kp RCTRL                                           &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&mo 1      &kp EQUAL  &tog 3  &trans  &sys_reset                            &kp BSPC  &kp DEL    &hyper       &hyper     &kp ENTER  &kp SPACE                             &trans  &trans     &kp LBKT  &kp RBKT  &mo 1
+&mo 1      &kp EQUAL  &tog 3  &trans  &sys_reset                            &kp BSPC  &kp DEL    &hyper       &hyper     &kp ENTER  &kp SPACE                             &trans  &to 0      &kp LBKT  &kp RBKT  &mo 1
             >;
         };
 
