@@ -18,10 +18,10 @@
         hyperwin: hyperwin {
             compatible = "zmk,behavior-mod-morph";
             label = "HYPERWIN";
-            bindings = <&kp LS(LC(LEFT_ALT))>, <&kp LS(LC(LEFT_ALT))>;
+            bindings = <&kp LC(LG(LEFT_ALT))>, <&kp LC(LG(LEFT_ALT))>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT)>;
+            mods = <(MOD_LCTL|MOD_LGUI|MOD_LALT)>;
         };
     };
 
