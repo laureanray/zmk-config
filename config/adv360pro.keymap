@@ -10,9 +10,9 @@
             compatible = "zmk,behavior-mod-morph";
             label = "HYPER_KEY";
             #binding-cells = <0>;
-            bindings = <&kp LG(LC(LS(LALT)))>, <&kp LG(LC(LS(LALT)))>;
+            bindings = <&kp LG(LC(LALT))>, <&kp LG(LC(LALT))>;
 
-            mods = <(MOD_LGUI|MOD_LCTL|MOD_LSFT|MOD_LALT)>;
+            mods = <(MOD_LGUI|MOD_LCTL|MOD_LALT)>;
         };
 
         hyperwin: hyperwin {
